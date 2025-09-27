@@ -15,7 +15,7 @@ def HillClimbing(start, step_size=1):
         else: 
             current_state = next_state #climb up
         
-#can implement any function
+#can implement any objective function
 def f(x):
     return -(x - 3) ** 2 + 9
 
