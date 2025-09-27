@@ -19,11 +19,13 @@ def UniformCostSearch(start, goal, graph):
 
 
 graph = {
-    'S': [('A', 1), ('B', 5)],
-    'A': [('C', 2)],
-    'B': [('C', 1)],
-    'C': [('G', 3)],
+    'S': [('A', 3), ('B', 2)],
+    'A': [('C', 4), ('D', 1)],
+    'B': [('D', 7)],
+    'C': [('G', 2)],     # Path: S → A → C → G = 9
+    'D': [('G', 2)],     # Path: S → A → D → G = 6  (best)
     'G': []
 }
+
 
 print(UniformCostSearch('S', 'G', graph))
