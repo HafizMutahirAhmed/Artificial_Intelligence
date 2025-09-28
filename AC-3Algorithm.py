@@ -39,15 +39,23 @@ def AC3(domain, neighbours, constraints_satisfied):
 
 
 def constraints_satisfied(x, y):
-    return x > y   # constraint: Xi > Xj
+    return x != y   # constraint: Xi > Xj
 
-domains = {
-    'A': [1, 2, 3, 4],
-    'B': [4]       # only "4"
-}
 neighbours = {
-    'A': ['B'],
-    'B': ['A']
+    'A': ['B','C','E'],
+    'B': ['A','E','F'],
+    'C': ['A','E','F'],
+    'D': ['F'],
+    'E': ['A','B','C','F'],
+    'F': ['E','D','C','B']    
+}
+domains = {
+    'A': ['G'],
+    'B': ['R'],
+    'C': ['R','G','B','Y'],
+    'D': ['R','G','B','Y'],
+    'E': ['R','G','B','Y'],
+    'F': ['R','G','B','Y'],
 }
 
 print(AC3(domains, neighbours, constraints_satisfied))
