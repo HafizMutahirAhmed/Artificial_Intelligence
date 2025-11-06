@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/home/mutahir/Documents/Artifial Intelligence/venv/bin/python3" "$0" "$@"
-' '''
+#!/home/mutahir/Documents/Ai/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
